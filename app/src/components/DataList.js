@@ -16,8 +16,8 @@ const DataList = (props) => {
             {props.isLoading ? <h3>Loading jokes . . .</h3> : null}
             {props.error ? <p>{props.error}</p> : null}
             {props.data.map((joke) => (
-                <div className='joke'>
-                    <p key={joke.id}><b>{joke.setup}</b></p>
+                <div className='joke' key={joke.id}>
+                    <p><b>{joke.setup}</b></p>
                     <div className='reveal'>
                         <p className='hint'><i>Mouseover this box to reveal punchline!</i></p>
                         <p className='punchline'><b>{joke.punchline}</b></p>
