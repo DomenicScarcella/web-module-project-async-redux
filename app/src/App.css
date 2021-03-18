@@ -7,9 +7,9 @@
   border: 2px solid gray;
   width: 50vw;
   min-width: 432px;
-  margin: 16px auto;
-  padding: 16px;
-  border-radius: 0px 32px 32px 32px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 0px 4rem 4rem 4rem;
 }
 
 .reveal {
