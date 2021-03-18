@@ -11,14 +11,18 @@ const DataList = (props) => {
 
     return (
         <div className='joke-wrapper'>
-            <h1>Ten random jokes from official-joke-api!</h1>
-            <h3>{`(Refresh browser for a new set of hilarious results!)`}</h3>
+            <h1>Ten random jokes from 'official-joke-api'</h1>
+            <h3><i>Refresh browser for a new set of hilarious results!</i></h3>
             {props.isLoading ? <h3>Loading jokes . . .</h3> : null}
             {props.error ? <p>{props.error}</p> : null}
             {props.data.map((joke) => (
-                <nl>
-                    <li className='joke' key={joke.id}>{joke.setup}<br /><br />{joke.punchline}<br /></li>
-                </nl>
+                <div className='joke'>
+                    <p key={joke.id}><b>{joke.setup}</b></p>
+                    <div className='reveal'>
+                        <p className='hint'><i>Mouseover this box to reveal punchline!</i></p>
+                        <p className='punchline'><b>{joke.punchline}</b></p>
+                    </div>
+                </div>
             ))}
         </div>
     );
