@@ -1,4 +1,4 @@
-import DataList from './components';
+import DataList from './components/DataList';
 import './App.css';
 
 export default function App() {

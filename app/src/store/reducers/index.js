@@ -1,4 +1,8 @@
-import { FETCH_DATA_SUCCESS, FETCH_DATA_START, FETCH_DATA_FAILURE } from '../actions'
+import {
+    FETCH_IT_SUCCESS,
+    FETCH_IT_START,
+    FETCH_IT_FAILURE, 
+} from '../actions'
 
 const initialState = {
     isLoading: false,
@@ -8,19 +12,19 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_DATA_START:
+        case FETCH_IT_START:
             return {
                 ...state,
                 isLoading: true
             };
-        case FETCH_DATA_SUCCESS:
+        case FETCH_IT_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
                 data: action.payload,
                 error: ''
             };
-        case FETCH_DATA_FAILURE:
+        case FETCH_IT_FAILURE:
             return {
                 ...state,
                 isLoading: false,
