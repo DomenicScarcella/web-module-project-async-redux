@@ -6,16 +6,21 @@
   background-color: white;
   border: 2px solid gray;
   width: 50vw;
-  min-width: 432px;
+  min-width: 300px;
+  max-width: 748px;
   margin: 1rem auto;
-  padding: 1rem;
   border-radius: 0px 4rem 4rem 4rem;
+}
+
+.setup {
+  width: auto;
+  padding: 0 2rem;
 }
 
 .reveal {
   width: 50%;
-  min-width: 384px;
-  margin: auto;
+  min-width: 240px;
+  margin: 0 auto 2rem;
   border: 2px dotted blue;
   cursor: pointer;
 }
@@ -25,7 +30,9 @@
 }
 
 .punchline {
-  color: white;
+  color: blue;
+  margin: -2rem auto 1rem;
+  visibility: hidden;
 }
 
 .reveal:hover {
@@ -37,6 +44,6 @@
 }
 
 .reveal:hover .punchline {
-  color: blue;
   border: none;
+  visibility: visible;
 }
